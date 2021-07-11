@@ -1,1 +1,1 @@
-https://asar2030.github.io/rsschool-cv/cv
+https://asar2030.github.io/rsschool-cv/
