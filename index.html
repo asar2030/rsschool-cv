@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.9/highlight.min.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
 </head>
 <body>
     <div class="container">
@@ -22,30 +25,30 @@
                 
             </header>
             <main>
-                <section class="about">
+                <section class="about" id="about">
                     <h2 class="title">ABOUT ME</h2>
                     <div>My goal is to become Frontend Junior developer. I’m enthuastic, responsible and hard working person.</div>
                 </section>
-                <section class="contacts">
+                <section class="contacts" id="contacts">
                     <h2 class="title">CONTACTS</h2>
                     <ul>
                         <li><a href="tel:+77085361083">tel: +77085361083</a></li>
                         <li><a href="mailto:asar.akhmetbekov@gmail.com">mail: asar.akhmetbekov@gmail.com</a></li>
                     </ul>
                 </section>
-                <section class="code">
+                <section class="code" id="code">
                     <h2 class="title">EXAMPLE OF CODE</h2>
-                    <p class="example__code"><code>
-                        function fact(n) { <br>
-                            let s = 1 <br>
-                            for (let i = 1; i<=n;i++) { <br>
-                               s = s * i  <br>
-                            } <br>
-                            return s <br>
+                    <pre><code class="html ">
+                        function fact(n) {
+                            let s = 1
+                            for (let i = 1; i<=n;i++) {
+                               s = s * i
+                            }
+                            return s
                          }
-                    </code></p>
+                    </code></pre>
                 </section>
-                <section class="skills">
+                <section class="skills" id="skills">
                     <h2 class="title">SKILLS</h2>
                     <ul class="skills__ul">
                         <li>HTML</li>
@@ -55,11 +58,11 @@
                         <li>SASS</li>
                     </ul>
                 </section>
-                <section class="experience">
+                <section class="experience" id="experience">
                     <h2 class="title">EXPERIENCE</h2>
                     <div>Udemy courses, YouTube 'Путь самурая', RS SCHOOL(stage0)</div>
                 </section>
-                <section class="education">
+                <section class="education" id="education">
                     <h2 class="title">EDUCATION</h2>
                     <div>Bachelor of economics</div>
                 </section>
@@ -68,6 +71,24 @@
                     <div>B1</div>
                 </section>
             </main>
+            <div class="hamburger">
+                <span class="hamburger__span"></span><span class="hamburger__span"></span><span class="hamburger__span"></span>
+            </div>
+            <div class="modal__container">
+                <div class="modal">
+                    <nav>
+                        <ul class="modal__wrapper">
+                            <li class="modal__li"><a href="#about">About</a></li>
+                            <li class="modal__li"><a href="#contacts">Contacts</a></li>
+                            <li class="modal__li"><a href="#code">Code</a></li>
+                            <li class="modal__li"><a href="#skills">Skills</a></li>
+                            <li class="modal__li"><a href="#experience">Experience</a></li>
+                            <li class="modal__li"><a href="#education">Education</a></li>
+                        </ul>
+                    </nav>
+                    <span class="modal__close">&times;</span>
+                </div>
+            </div>
         </div>
         <footer>
             <a href="https://github.com/asar2030" target="_blank">My GitHub</a>

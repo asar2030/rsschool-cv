@@ -34,3 +34,34 @@ console.log(`Ваша оценка - 125 баллов
 11) выполнены требования к репозиторию: есть ссылка на задание, скриншот страницы СV, ссылка на деплой страницы CV на GitHub Pages, указана дата дедлайна, выполнена самооценка (самооценку расписываем по пунктам критериев оценки, указывая балл за каждый пункт) 
 
 `)
+
+
+const modalOpen = document.querySelector('.hamburger')
+const modalClose = document.querySelector('.modal__close')
+const modal = document.querySelector('.modal__container')
+
+
+modalOpen.addEventListener('click', () => {
+    modal.classList.toggle('show')
+    document.body.style.overflow='hidden'
+})
+
+modalClose.addEventListener('click', () => {
+    modal.classList.remove('show');
+    document.body.style.overflow='unset'
+})
+
+window.onclick = function(event) {
+    if (event.target == modal) {
+      modal.classList.remove('show');
+      document.body.style.overflow='unset'
+    }
+  }
+
+window.addEventListener('hashchange', isHash,  false)
+
+function isHash() {
+    modal.classList.remove('show')
+    location.hash = '/'
+    document.body.style.overflow='unset'
+}
